@@ -1,0 +1,4 @@
+﻿  SortArray.cpp
+c:\users\виктория\documents\visual studio 2015\projects\aias_trees_sannikovavo_shukinaae\aias_sannikovavo_shukinaae\aias_sannikovavo_shukinaae\sortarray.cpp(9): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  AIAS_SannikovaVO_ShukinaAE.vcxproj -> C:\Users\Виктория\Documents\Visual Studio 2015\Projects\AIAS_Trees_SannikovaVO_ShukinaAE\AIAS_SannikovaVO_ShukinaAE\Debug\AIAS_SannikovaVO_ShukinaAE.exe
+  AIAS_SannikovaVO_ShukinaAE.vcxproj -> C:\Users\Виктория\Documents\Visual Studio 2015\Projects\AIAS_Trees_SannikovaVO_ShukinaAE\AIAS_SannikovaVO_ShukinaAE\Debug\AIAS_SannikovaVO_ShukinaAE.pdb (Partial PDB)
