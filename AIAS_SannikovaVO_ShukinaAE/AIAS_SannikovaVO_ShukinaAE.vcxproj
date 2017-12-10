@@ -110,7 +110,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Example.cpp" />
     <ClCompile Include="RB-Trees.cpp" />
     <ClCompile Include="SortArray.cpp" />
   </ItemGroup>
