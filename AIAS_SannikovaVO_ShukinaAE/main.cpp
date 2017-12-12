@@ -8,7 +8,6 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
-/////////////////////////////////////////////////////////////////////
 
 int main() {
 start: //label
@@ -30,68 +29,75 @@ start: //label
 			tmp = distribution(generator);
 			AVLTr.Insert(AVLTr.GetRoot(), tmp);
 		}
-		if(size<=100)
+		if (size <= 100) {
 			AVLTr.Show(AVLTr.GetRoot());
-
+			cout << endl;
+		}
 		/*cout << endl << endl << "size of set: " << set.size() << endl;
 		cout << endl;*/
 		tmp = distribution(generator);
 
-		cout << endl << "New element: " << tmp << endl;
-		
+		cout << endl << "New generate element: " << tmp << endl;
+
 		auto start_time = std::chrono::steady_clock::now();
 		AVLTr.Insert(AVLTr.GetRoot(), tmp);
 		auto finish_time = std::chrono::steady_clock::now();
-		
-		if(size <=100)
+
+		if (size <= 100) {		
+			cout << endl;
 			AVLTr.Show(AVLTr.GetRoot());
+		}
 		cout << endl;
 		auto result_time = std::chrono::duration_cast<std::chrono::microseconds>(finish_time - start_time);
-		cout << "insert time: " << result_time.count() << endl << endl;
-		
-		
+		cout << "Insert time: " << result_time.count() << endl;
+
+
 		start_time = std::chrono::steady_clock::now();
 		AVLTr.remove(AVLTr.GetRoot(), tmp);
 		finish_time = std::chrono::steady_clock::now();
-		if(size <=100)
+		if (size <= 100) {
+			cout << endl;
 			AVLTr.Show(AVLTr.GetRoot());
+		}
 		cout << endl;
 		result_time = std::chrono::duration_cast<std::chrono::microseconds>(finish_time - start_time);
-		cout << "delete time: " << result_time.count() << endl << endl;
-		if (size <=100)
+		cout << "Delete time: " << result_time.count() << endl;
+		if (size <= 100) {
+			cout << endl;
 			AVLTr.Show(AVLTr.GetRoot());
+		}
 		cout << endl;
-		
-		
 		start_time = std::chrono::steady_clock::now();
 		AVLTr.Search(AVLTr.GetRoot(), tmp);
 		finish_time = std::chrono::steady_clock::now();
 		auto result = AVLTr.Search(AVLTr.GetRoot(), tmp);
 		if (result != NULL) {
-			cout << "element " << tmp << " found" << endl;
+			cout << "Element " << tmp << " found." << endl;
 		}
 		else {
-			cout << "element " << tmp << " not found" << endl;
+			cout << "Element " << tmp << " NOT found." << endl;
 		}
 		result_time = std::chrono::duration_cast<std::chrono::microseconds>(finish_time - start_time);
-		cout << "find time: " << result_time.count() << endl;
-		
+		cout << "Find time: " << result_time.count() << endl;
+
 		AVLTr.Insert(AVLTr.GetRoot(), tmp);
-		if(size<=100)
+		if (size <= 100) {
+			cout << endl;
 			AVLTr.Show(AVLTr.GetRoot());
+		}
 		start_time = std::chrono::steady_clock::now();
 		AVLTr.Search(AVLTr.GetRoot(), tmp);
 		finish_time = std::chrono::steady_clock::now();
 		result = AVLTr.Search(AVLTr.GetRoot(), tmp);
 		cout << endl;
 		if (result != NULL) {
-			cout << "element " << tmp << " found" << endl;
+			cout << "Element " << tmp << " found." << endl;
 		}
 		else {
-			cout << "element " << tmp << " not found" << endl;
+			cout << "Element " << tmp << " NOT found." << endl;
 		}
 		result_time = std::chrono::duration_cast<std::chrono::microseconds>(finish_time - start_time);
-		cout << "find time: " << result_time.count() << endl;
+		cout << "Find time: " << result_time.count() << endl << endl;
 		break;
 	}
 	case 1:
@@ -107,60 +113,69 @@ start: //label
 			tmp = distribution(generator);
 			TreapTr.insert(tmp);
 		}
-		if(size<=100)
+		if (size <= 100) {
 			TreapTr.Show(TreapTr.GetRoot(), 0);
-
+			cout << endl;
+		}
 		/*cout << endl << endl << "size of set: " << set.size() << endl;
 		cout << endl;*/
 		tmp = distribution(generator);
-		cout << endl << "New element: " << tmp << endl;
+		cout << endl << "New generate element: " << tmp << endl ;
 		auto start_time = std::chrono::steady_clock::now();
 		TreapTr.insert(tmp);
 		auto finish_time = std::chrono::steady_clock::now();
-		if(size<=100)
+		if (size <= 100) {
+			cout << endl;
 			TreapTr.Show(TreapTr.GetRoot(), 0);
+		}
 		cout << endl;
 		auto result_time = std::chrono::duration_cast<std::chrono::microseconds>(finish_time - start_time);
-		cout << "insert time: " << result_time.count() << endl << endl;
+		cout << "Insert time: " << result_time.count() << endl;
 		start_time = std::chrono::steady_clock::now();
 		TreapTr.remove(tmp);
 		finish_time = std::chrono::steady_clock::now();
-		if(size<=100)
+		if (size <= 100) {
+			cout << endl;
 			TreapTr.Show(TreapTr.GetRoot(), 0);
+		}
 		cout << endl;
 		result_time = std::chrono::duration_cast<std::chrono::microseconds>(finish_time - start_time);
-		cout << "delete time: " << result_time.count() << endl << endl;
-		if(size<=100)
+		cout << "Delete time: " << result_time.count() << endl;
+		if (size <= 100) {
+			cout << endl;
 			TreapTr.Show(TreapTr.GetRoot(), 0);
+		}
 		cout << endl;
 		start_time = std::chrono::steady_clock::now();
 		TreapTr.Search(TreapTr.GetRoot(), tmp);
 		finish_time = std::chrono::steady_clock::now();
 		auto result = TreapTr.Search(TreapTr.GetRoot(), tmp);
 		if (result != NULL) {
-			cout << "element " << tmp << " found" << endl;
+			cout << "Element " << tmp << " found." << endl;
 		}
 		else {
-			cout << "element " << tmp << " not found" << endl;
+			cout << "Element " << tmp << " NOT found." << endl;
 		}
 		result_time = std::chrono::duration_cast<std::chrono::microseconds>(finish_time - start_time);
-		cout << "find time: " << result_time.count() << endl;
+		cout << "Find time: " << result_time.count() << endl;
 		TreapTr.insert(tmp);
-		if(size<=100)
+		if (size <= 100) {
+			cout << endl;
 			TreapTr.Show(TreapTr.GetRoot(), 0);
+		}
+		cout << endl;
 		start_time = std::chrono::steady_clock::now();
 		TreapTr.Search(TreapTr.GetRoot(), tmp);
 		finish_time = std::chrono::steady_clock::now();
 		result = (TreapTr.Search(TreapTr.GetRoot(), tmp));
-		cout << endl;
 		if (result != NULL) {
-			cout << "element " << tmp << " found" << endl;
+			cout << "Element " << tmp << " found." << endl;
 		}
 		else {
-			cout << "element " << tmp << " not found" << endl;
+			cout << "Element " << tmp << " NOT found." << endl;
 		}
 		result_time = std::chrono::duration_cast<std::chrono::microseconds>(finish_time - start_time);
-		cout << "find time: " << result_time.count() << endl;	
+		cout << "Find time: " << result_time.count() << endl << endl;
 		break;
 	}
 	case 2:
@@ -173,38 +188,48 @@ start: //label
 		int n;
 		cout << "Enter size: ";
 		cin >> n;
-		cout << endl;
 		for (int i = 0; i < n; i++) {
 			tmp = distribution(generator);
 			set.insert(tmp);
 		}
-		for (it = set.begin(); it != set.end(); ++it) {
-			std::cout << *it << ' ';
+		if (n <= 100) {
+			for (it = set.begin(); it != set.end(); ++it) {
+				cout << *it << ' ';
+			}
+			cout << endl;
 		}
-		cout << endl << endl << "size of set: " << set.size() << endl;
+		//cout << endl << endl << "Size of set: " << set.size() << endl;
 		cout << endl;
 		tmp = distribution(generator);
-		cout << "element: " << tmp << endl;
+		cout << "New generate element: " << tmp << endl << endl;
 		auto start_time = std::chrono::steady_clock::now();
 		set.insert(tmp);
 		auto finish_time = std::chrono::steady_clock::now();
-		for (it = set.begin(); it != set.end(); ++it) {
-			std::cout << *it << ' ';
+		if (n <= 100) {
+			for (it = set.begin(); it != set.end(); ++it) {
+				cout << *it << ' ';
+			}
 		}
 		cout << endl;
 		auto result_time = std::chrono::duration_cast<std::chrono::microseconds>(finish_time - start_time);
-		cout << "insert time: " << result_time.count() << endl << endl;
+		cout << "Insert time: " << result_time.count() << endl;
 		start_time = std::chrono::steady_clock::now();
 		set.erase(tmp);
 		finish_time = std::chrono::steady_clock::now();
-		for (it = set.begin(); it != set.end(); ++it) {
-			std::cout << *it << ' ';
+		if (n <= 100) {
+			for (it = set.begin(); it != set.end(); ++it) {
+				cout << *it << ' ';
+			}
+			cout << endl;
 		}
 		cout << endl;
 		result_time = std::chrono::duration_cast<std::chrono::microseconds>(finish_time - start_time);
-		cout << "delete time: " << result_time.count() << endl << endl;
-		for (it = set.begin(); it != set.end(); ++it) {
-			std::cout << *it << ' ';
+		cout << "Delete time: " << result_time.count() << endl;
+		if (n <= 100) {
+			for (it = set.begin(); it != set.end(); ++it) {
+				cout << *it << ' ';
+			}
+			cout << endl;
 		}
 		cout << endl;
 		start_time = std::chrono::steady_clock::now();
@@ -212,17 +237,19 @@ start: //label
 		finish_time = std::chrono::steady_clock::now();
 		auto result = set.find(tmp);
 		if (result != set.end()) {
-			cout << "element " << tmp << " found" << endl;
+			cout << "Element " << tmp << " found." << endl;
 		}
 		else {
-			cout << "element " << tmp << " not found" << endl;
+			cout << "Element " << tmp << " NOT found." << endl;
 		}
 		result_time = std::chrono::duration_cast<std::chrono::microseconds>(finish_time - start_time);
-		cout << "find time: " << result_time.count() << endl;
-		cout << "------------------------------" << endl;
+		cout << "Find time: " << result_time.count() << endl;
 		set.insert(tmp);
-		for (it = set.begin(); it != set.end(); ++it) {
-			std::cout << *it << ' ';
+		if (n <= 100) {
+			for (it = set.begin(); it != set.end(); ++it) {
+				std::cout << *it << ' ';
+			}
+			cout << endl;
 		}
 		start_time = std::chrono::steady_clock::now();
 		set.find(tmp);
@@ -230,13 +257,13 @@ start: //label
 		result = set.find(tmp);
 		cout << endl;
 		if (result != set.end()) {
-			cout << "element " << tmp << " found" << endl;
+			cout << "Element " << tmp << " found." << endl;
 		}
 		else {
-			cout << "element " << tmp << " not found" << endl;
+			cout << "Element " << tmp << " NOT found." << endl;
 		}
 		result_time = std::chrono::duration_cast<std::chrono::microseconds>(finish_time - start_time);
-		cout << "find time: " << result_time.count() << endl;
+		cout << "Find time: " << result_time.count() << endl << endl;
 		break;
 	}
 	case 3:
@@ -252,46 +279,76 @@ start: //label
 			vector.push_back(distribution(generator));
 		}
 		int tmp = vector.back();
-		cout << "tmp: " << tmp << endl;
-		for (it = vector.begin(); it != vector.end(); ++it) {
-			std::cout << *it << ' ';
+		//cout << "Tmp: " << tmp << endl;
+		cout << "Array: " << endl;
+		if (n <= 100) {
+			for (it = vector.begin(); it != vector.end(); ++it) {
+				std::cout << *it << ' ';
+			}
 		}
 		cout << endl << "Sort array:" << endl;
 		sort(vector.begin(), vector.end());
-		for (it = vector.begin(); it != vector.end(); ++it) {
-			std::cout << *it << ' ';
+		if (n <= 100) {
+			for (it = vector.begin(); it != vector.end(); ++it) {
+				std::cout << *it << ' ';
+			}
 		}
 		cout << endl << endl;
-		cout << "Want to insert tmp: " << tmp << endl;
+
+		tmp = distribution(generator);
+		cout << "New generate element: " << tmp << endl << endl;
 		auto start_time = std::chrono::steady_clock::now();
-		it = find(vector.begin(), vector.end(), tmp);
+		vector.insert(find_if(vector.begin(), vector.end(), [&tmp](int i) {return i > tmp; }), tmp);
 		auto finish_time = std::chrono::steady_clock::now();
-		if (it != vector.end()) {
-			cout << "Element " << tmp << " found" << endl;
-		}
-		else {
-			cout << "Element " << tmp << " NOT found" << endl;
+		if (n <= 100) {
+			for (it = vector.begin(); it != vector.end(); ++it) {
+				std::cout << *it << ' ';
+			}
 		}
 		auto result_time = std::chrono::duration_cast<std::chrono::microseconds>(finish_time - start_time);
-		cout << "find time: " << result_time.count() << endl << endl;
+		cout << endl << "Insert time: " << result_time.count() << endl << endl;
+
+		
 		start_time = std::chrono::steady_clock::now();
 		vector.erase(find(vector.begin(), vector.end(), tmp));
 		finish_time = std::chrono::steady_clock::now();
-		cout << "Array without tmp: " << endl;
-		for (it = vector.begin(); it != vector.end(); ++it) {
-			std::cout << *it << ' ';
+		//cout << "Array without tmp: " << endl;
+		if (n <= 100) {
+			for (it = vector.begin(); it != vector.end(); ++it) {
+				std::cout << *it << ' ';
+			}
 		}
 		result_time = std::chrono::duration_cast<std::chrono::microseconds>(finish_time - start_time);
 		cout << endl << "Erase time: " << result_time.count() << endl << endl;
-		cout << "Want to insert tmp: " << tmp << endl;
+
+		//cout << "Want to insert tmp: " << tmp << endl;
 		start_time = std::chrono::steady_clock::now();
-		vector.insert(find_if(vector.begin(), vector.end(), [&tmp](int i) {return i > tmp; }), tmp);
+		it = find(vector.begin(), vector.end(), tmp);
 		finish_time = std::chrono::steady_clock::now();
-		for (it = vector.begin(); it != vector.end(); ++it) {
-			std::cout << *it << ' ';
+		if (it != vector.end()) {
+			cout << "Element " << tmp << " found." << endl;
+		}
+		else {
+			cout << "Element " << tmp << " NOT found." << endl;
 		}
 		result_time = std::chrono::duration_cast<std::chrono::microseconds>(finish_time - start_time);
-		cout << endl << "Insert time: " << result_time.count() << endl;	
+		cout << "Find time: " << result_time.count() << endl << endl;
+		
+		vector.insert(find_if(vector.begin(), vector.end(), [&tmp](int i) {return i > tmp; }), tmp);
+		start_time = std::chrono::steady_clock::now();
+		it = find(vector.begin(), vector.end(), tmp);
+		finish_time = std::chrono::steady_clock::now();
+		if (it != vector.end()) {
+			cout << "Element " << tmp << " found." << endl;
+		}
+		else {
+			cout << "Element " << tmp << " NOT found." << endl;
+		}
+		result_time = std::chrono::duration_cast<std::chrono::microseconds>(finish_time - start_time);
+		cout << "Find time: " << result_time.count() << endl << endl;
+
+
+
 		break;
 	}
 	default:
@@ -315,7 +372,7 @@ last_start:
 
 	case 1:
 	{
-		goto start;	
+		goto start;
 		break;
 	}
 
