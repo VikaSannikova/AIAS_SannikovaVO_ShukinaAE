@@ -3,11 +3,13 @@ c:\users\виктория\documents\visual studio 2015\projects\aias_sannikovavo
 main.cpp(20): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
 main.cpp(105): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
 main.cpp(183): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-main.cpp(271): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+main.cpp(272): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  RB-Trees.cpp
+  SortArray.cpp
+  AVL_main.cpp
+  Treap_main.cpp
   Generating code
-  9 of 340 functions ( 2.6%) were compiled, the rest were copied from previous compilation.
-    8 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+  All 341 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Finished generating code
   AIAS_SannikovaVO_ShukinaAE.vcxproj -> C:\Users\Виктория\Documents\Visual Studio 2015\Projects\AIAS_SannikovaVO_ShukinaAE\x64\Release\AIAS_SannikovaVO_ShukinaAE.exe
   AIAS_SannikovaVO_ShukinaAE.vcxproj -> C:\Users\Виктория\Documents\Visual Studio 2015\Projects\AIAS_SannikovaVO_ShukinaAE\x64\Release\AIAS_SannikovaVO_ShukinaAE.pdb (Full PDB)
